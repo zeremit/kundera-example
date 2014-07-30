@@ -18,6 +18,9 @@ public class User{
     @Column(name = "SURNAME")
     private String surname;
 
+    @Column(name = "DELETED")
+    private boolean deleted;
+
     public String getUserId() {
         return userId;
     }
@@ -42,12 +45,21 @@ public class User{
         this.surname = surname;
     }
 
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "userId='" + userId + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
+                ", deleted=" + deleted +
                 '}';
     }
 }
