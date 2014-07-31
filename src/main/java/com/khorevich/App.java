@@ -53,10 +53,20 @@ public class App
         for(User u: q.getResultList()){
             System.out.println(u);
         }
+        System.out.println();
 
         query.where(p1);
         q = em.createQuery(query);
         for(User u: q.getResultList()){
+            System.out.println(u);
+        }
+        System.out.println();
+
+        String querySql = "select u from User u where u.name = 'Alex' OR u.surname='Smith'";
+        Query result = em.createQuery(querySql);
+//        result.setParameter("name", "Alex");
+//        result.setParameter("surname", "Smith");
+        for(Object u : result.getResultList()){
             System.out.println(u);
         }
         System.out.println();
