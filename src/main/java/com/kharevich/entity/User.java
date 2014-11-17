@@ -1,4 +1,4 @@
-package com.khorevich.entity;
+package com.kharevich.entity;
 
 
 import javax.persistence.*;

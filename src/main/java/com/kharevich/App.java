@@ -1,10 +1,9 @@
-package com.khorevich;
+package com.kharevich;
 
-import com.khorevich.entity.User;
+import com.kharevich.entity.User;
 
 import javax.persistence.*;
 import javax.persistence.criteria.*;
-import java.util.List;
 
 /**
  * Hello world!
